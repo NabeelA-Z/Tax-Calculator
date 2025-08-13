@@ -3,14 +3,30 @@
     <head>
         <title>Canada Tax Calculator</title>
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset ="UTF-8">
+        <style>
+            #money { /*want a frosted glass look */
+                margin: auto;
+                background: rgba(255,255,255,0.2);
+                backdrop-filter: blur(10px);
+
+            }
+        </style>
     </head>
     <body>
         <h1>Canada Federal and Provincial Tax Calculator</h1>
         <h3>This was just made for fun, please do not take this seriously</h3>
         <br>
-        <div>
+        <div id = "money">
             <input type = "number" name = "salary" placeholder="salary">
             <input type = "submit">
         </div>
+            <input list = "provinces" name = "province" placeholder = "Province">
+            <datalist>
+                <option value = "Alberta">
+                <option value = "British Columbia">
+                <option value = "Ontario">
+                <option value = "Quebec">
+            </datalist>
     </body>
 </html>
