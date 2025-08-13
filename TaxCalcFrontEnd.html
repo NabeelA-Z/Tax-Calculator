@@ -5,28 +5,43 @@
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <meta charset ="UTF-8">
         <style>
-            #money { /*want a frosted glass look */
-                margin: auto;
-                background: rgba(255,255,255,0.2);
+            .money {
+                width: 900px;
+                height: 400px;
+                margin: 0 auto;
                 backdrop-filter: blur(10px);
-
+                display: flex; 
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 24px;
+            }
+            h1, h3 {
+                text-align: center;
+                color: whitesmoke;
+            }
+            body{
+                background-image: url(faded_gallery-OfdOEdGYiuk-unsplash.jpg);
+                background-size: cover;
+                background-attachment: fixed;
             }
         </style>
+
     </head>
     <body>
         <h1>Canada Federal and Provincial Tax Calculator</h1>
         <h3>This was just made for fun, please do not take this seriously</h3>
         <br>
-        <div id = "money">
-            <input type = "number" name = "salary" placeholder="salary">
-            <input type = "submit">
-        </div>
+        <div class = "money">
+            <input type = "number" name = "salary" id = "salaryid" placeholder="Salary">
             <input list = "provinces" name = "province" placeholder = "Province">
-            <datalist>
+            <datalist id = "provinces">
                 <option value = "Alberta">
                 <option value = "British Columbia">
                 <option value = "Ontario">
                 <option value = "Quebec">
             </datalist>
+        </div>
     </body>
 </html>
